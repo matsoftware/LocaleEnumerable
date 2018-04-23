@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocaleEnumerable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gj-Cg-OGN">
+                                <rect key="frame" x="108" y="80" width="104.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qj-jt-KC3">
+                                <rect key="frame" x="97" y="201" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ih8-c2-kYt">
+                                <rect key="frame" x="97.5" y="322" width="125" height="30"/>
+                                <state key="normal" title="Show random text"/>
+                                <connections>
+                                    <action selector="showRandomText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rnL-aS-oy8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2gj-Cg-OGN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5eJ-aO-EnL"/>
+                            <constraint firstItem="2gj-Cg-OGN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="6xc-th-Bxw"/>
+                            <constraint firstItem="4Qj-jt-KC3" firstAttribute="top" secondItem="2gj-Cg-OGN" secondAttribute="bottom" constant="100" id="Not-rT-fVl"/>
+                            <constraint firstItem="Ih8-c2-kYt" firstAttribute="top" secondItem="4Qj-jt-KC3" secondAttribute="bottom" constant="100" id="a2M-mW-gDv"/>
+                            <constraint firstItem="4Qj-jt-KC3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kwY-AI-HWk"/>
+                            <constraint firstItem="Ih8-c2-kYt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uMe-Hc-63m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnShowRandomText" destination="Ih8-c2-kYt" id="8LV-G7-Wba"/>
+                        <outlet property="lblSubTitle" destination="4Qj-jt-KC3" id="ztg-oV-S2W"/>
+                        <outlet property="lblTitle" destination="2gj-Cg-OGN" id="l8t-Qb-VZg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

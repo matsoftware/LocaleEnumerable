@@ -1,0 +1,12 @@
+
+/* LocaleEnumerable keys */
+
+"app_viewcontroller_title" = "Example app";
+"app_viewcontroller_subtitle" = "Example subtitle";
+"app_viewcontroller_cta" = "Show random text";
+
+/* Random text */
+"app_randomtext_title" = "Random text";
+"app_randomtext_1" = "🍺";
+"app_randomtext_2" = "🏏";
+"app_randomtext_3" = "🇬🇧";
