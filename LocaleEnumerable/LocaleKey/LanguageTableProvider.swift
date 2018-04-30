@@ -18,6 +18,8 @@ final class LanguageTableProvider: LanguageTableProvideable {
     
     static let shared: LanguageTableProvider = LanguageTableProvider()
     
+    private static let defaultLanguageTablePrefix = "Localizable"
+    
     private let preferredLanguage: String
     
     init(preferredLanguage: String = Locale.preferredLanguages.first ?? "") {
@@ -27,11 +29,11 @@ final class LanguageTableProvider: LanguageTableProvideable {
     lazy var currentSupportedLanguageTable: String = {
         let preferredLanguageWithoutRegion =
             preferredLanguage.split(separator: "-").first ?? ""
-        let languageTableFile = "Localizable-\(String(preferredLanguageWithoutRegion).uppercased())"
+        let languageTableFile = "\(LanguageTableProvider.defaultLanguageTablePrefix)-\(String(preferredLanguageWithoutRegion).uppercased())"
         if Bundle.main.path(forResource: languageTableFile, ofType: "strings") != nil {
             return languageTableFile
         } else {
-            return "Localizable-EN"
+            return "\(LanguageTableProvider.defaultLanguageTablePrefix)-EN"
         }
     }()
     

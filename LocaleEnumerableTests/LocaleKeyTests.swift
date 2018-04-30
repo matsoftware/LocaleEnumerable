@@ -1,5 +1,5 @@
 //
-//  LocalizedTextTests.swift
+//  LocaleKeyTests.swift
 //  LocaleEnumerableTests
 //
 //  Created by Mattia Campolese on 23/04/2018.
