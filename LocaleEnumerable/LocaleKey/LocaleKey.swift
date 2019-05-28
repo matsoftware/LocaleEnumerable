@@ -7,7 +7,7 @@
 //
 
 /// List of localizable keys
-enum LocaleKey: String, CaseIterable {
+enum LocaleKey: String, Localizable {
     
     case app_viewcontroller_title
     case app_viewcontroller_subtitle

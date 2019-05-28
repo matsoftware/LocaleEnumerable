@@ -25,7 +25,7 @@ class LocaleKeyTests: XCTestCase {
     
     private func assertLocalizedText(languageTable: LanguageTableProvideable, line: UInt = #line) {
         LocaleKey.allCases.forEach {
-            XCTAssertNotEqual(LocalizedText($0, languageTable: languageTable).text, $0.rawValue, line: line)
+            XCTAssertNotEqual(LocalizedText<LocaleKey>($0, languageTable: languageTable).text, $0.rawValue, line: line)
         }
         
     }

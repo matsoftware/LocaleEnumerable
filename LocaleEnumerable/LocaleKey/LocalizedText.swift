@@ -8,13 +8,19 @@
 
 import Foundation
 
-/// Opaque type that abstracts the localization's mechanism of the injected localeKey.
-struct LocalizedText {
+protocol Localizable: CaseIterable {
     
-    private let localeKey: LocaleKey
+    var rawValue: String { get }
+    
+}
+
+/// Opaque type that abstracts the localization's mechanism of the injected localeKey.
+struct LocalizedText<T: Localizable> {
+    
+    private let localeKey: T
     private let languageTable: LanguageTableProvideable
     
-    init(_ localeKey: LocaleKey, languageTable: LanguageTableProvideable = LanguageTableProvider.shared) {
+    init(_ localeKey: T, languageTable: LanguageTableProvideable = LanguageTableProvider.shared) {
         self.localeKey = localeKey
         self.languageTable = languageTable
     }
@@ -24,3 +30,4 @@ struct LocalizedText {
     }
     
 }
+

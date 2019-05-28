@@ -26,9 +26,9 @@ class ViewController: UIViewController {
     }
     
     private func localizeText() {
-        lblTitle.text = LocalizedText(.app_viewcontroller_title).text
-        lblSubTitle.text = LocalizedText(.app_viewcontroller_subtitle).text
-        btnShowRandomText.setTitle(LocalizedText(.app_viewcontroller_cta).text, for: .normal)
+        lblTitle.text = LocalizedText<LocaleKey>(.app_viewcontroller_title).text
+        lblSubTitle.text = LocalizedText<LocaleKey>(.app_viewcontroller_subtitle).text
+        btnShowRandomText.setTitle(LocalizedText<LocaleKey>(.app_viewcontroller_cta).text, for: .normal)
     }
     
     private func displayRandomTextAlert() {
@@ -37,11 +37,11 @@ class ViewController: UIViewController {
         let localeKey = LocaleKey.allCases.first {
             $0.rawValue.hasSuffix("\(elementIndex)")
         } ?? .app_randomtext_1
-        showAlert(with: LocalizedText(localeKey).text)
+        showAlert(with: LocalizedText<LocaleKey>(localeKey).text)
     }
     
     private func showAlert(with localizedRandomText: String) {
-        let alert = UIAlertController(title: LocalizedText(.app_randomtext_title).text,
+        let alert = UIAlertController(title: LocalizedText<LocaleKey>(.app_randomtext_title).text,
                                       message: localizedRandomText,
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
